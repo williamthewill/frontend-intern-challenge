@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+body {
+    padding: 0;
+    margin: 0;
+    color: #777;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style: none
+}
+
+a,
+h2 {
+    color: #aa1423;
+}
+
+header,
+article,
+footer {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    height: 42px;
+    background-color: #fff;
+    padding: 4px 0px;
+}
+
+header #logo-chaordic {
+    width: 100%;
+    height: 31px;
+    background: url(../Assets/logo-chaordic.png) 50% 6px no-repeat;
+}
+
+article .head-article {
+    color: #fff;
+    width: 100%;
+    height: auto;
+    background: url(../Assets/background-home.jpg) 0 0 / 100% no-repeat;
+}
+
+article h1 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.8vw;
+    padding-left: 11px;
+    margin: 0;
+}
+
+article .minify-link {
+    text-align: center;
+    padding: 16% 25%;
+}
+
+article .minify-link p {
+    font-size: 30px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    left: 6%;
+}
+
+article .minify-link form {
+    padding-top: 15px;
+}
+
+article .minify-link form input[type='text'] {
+    width: 65%;
+    float: left;
+    position: relative;
+    left: 6.4%;
+    top: 15px;
+    height: 35px;
+    font-size: 1.5vw;
+    color: #FF6E18;
+    border: none;
+    background: no-repeat;
+    border-bottom: 1px solid #FF6E18;
+}
+
+article .minify-link form input[type='button'] {
+    height: 53px;
+    font-size: 1.5vw;
+    position: relative;
+    left: 10px;
+    background-color: #FF6E18;
+    border: none;
+    color: #fff;
+    width: 200px;
+    font-weight: 500;
+}
+
+article h2 {
+    text-align: center;
+    font-size: 3.5vw;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    font-weight: 100;
+}
+
+article .top-five {
+    padding: 30px 0px;
+}
+
+article ul {
+    width: 40%;
+    position: relative;
+    left: 27%;
+}
+
+article ul li {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    font-size: 1.2vw;
+}
+
+article ul li span {
+    float: right;
+}
+
+
+/**
+*** Seta para BAIXO
+**/
+
+.down-arrow:before {
+    content: "";
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #fff;
+    float: left;
+    position: relative;
+    display: inline-block;
+    left: 47.5%;
+}
+
+article .hits {
+    background-color: rgb(238, 238, 238);
+    padding: 100px 0px;
+}
+
+article .hits span {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+article .hits span.number {
+    height: 63px;
+    width: 200px;
+    font-size: 2vw;
+    padding: 7px;
+    left: 44.8%;
+    border: 1px solid #b1a9a9;
+    font-family: 'Roboto Slab', serif;
+    color: #aa1423;
+    display: block;
+    background-color: #fff;
+}
+
+article .text {
+    font-size: 1.4vw;
+    padding-top: 5px;
+}
+
+footer {
+    height: 40px;
+    padding: 6px 0px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .link-footer {
+    position: relative;
+    left: 17%;
+}
+
+footer ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 18.9%;
+}
+
+footer ul li {
+    float: left;
+}
+
+footer ul li a {
+    position: relative;
+    padding: 0 15px;
+}
