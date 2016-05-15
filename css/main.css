@@ -47,50 +47,42 @@ article h1 {
     color: #fff;
     font-family: 'Roboto Slab', serif;
     font-size: 3.8vw;
-    padding-left: 11px;
     margin: 0;
 }
 
 article .minify-link {
     text-align: center;
-    padding: 16% 25%;
+    padding: 13% 20%;
 }
 
 article .minify-link p {
-    font-size: 30px;
-    width: 90%;
+    font-size: 2.4vw;
     text-align: center;
-    position: relative;
-    left: 6%;
 }
 
 article .minify-link form {
-    padding-top: 15px;
+    padding-top: 9%;
 }
 
 article .minify-link form input[type='text'] {
-    width: 65%;
-    float: left;
-    position: relative;
-    left: 6.4%;
-    top: 15px;
-    height: 35px;
+    width: 56%;
     font-size: 1.5vw;
     color: #FF6E18;
     border: none;
     background: no-repeat;
     border-bottom: 1px solid #FF6E18;
+    padding: 1vw;
 }
 
 article .minify-link form input[type='button'] {
-    height: 53px;
+    padding: 1vw;
     font-size: 1.5vw;
     position: relative;
-    left: 10px;
+    left: 2%;
     background-color: #FF6E18;
     border: none;
     color: #fff;
-    width: 200px;
+    width: 19%;
     font-weight: 500;
 }
 
@@ -100,22 +92,25 @@ article h2 {
     font-family: 'Roboto Slab', serif;
     margin: 0;
     font-weight: 100;
+    padding: 40px 0px 10px 0;
+    ;
 }
 
 article .top-five {
-    padding: 30px 0px;
+    padding: 0px 0px;
 }
 
 article ul {
-    width: 40%;
+    width: 45%;
     position: relative;
-    left: 27%;
+    left: 25%;
+    padding: 0;
 }
 
 article ul li {
     border-bottom: 1px solid #eee;
     padding: 10px;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
 }
 
 article ul li span {
@@ -129,18 +124,22 @@ article ul li span {
 
 .down-arrow:before {
     content: "";
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 50px solid #fff;
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+    border-top: 5vw solid #fff;
     float: left;
     position: relative;
     display: inline-block;
-    left: 47.5%;
+    left: 45%;
 }
 
 article .hits {
     background-color: rgb(238, 238, 238);
-    padding: 100px 0px;
+    padding: 7vw 0px;
+}
+
+article .hits h2 {
+    padding: 10px 0;
 }
 
 article .hits span {
@@ -150,11 +149,10 @@ article .hits span {
 }
 
 article .hits span.number {
-    height: 63px;
-    width: 200px;
+    width: 20%;
     font-size: 2vw;
-    padding: 7px;
-    left: 44.8%;
+    padding: 9px;
+    left: 40%;
     border: 1px solid #b1a9a9;
     font-family: 'Roboto Slab', serif;
     color: #aa1423;
@@ -163,7 +161,7 @@ article .hits span.number {
 }
 
 article .text {
-    font-size: 1.4vw;
+    font-size: 2vw;
     padding-top: 5px;
 }
 
