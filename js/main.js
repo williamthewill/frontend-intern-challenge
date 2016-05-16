@@ -1,9 +1,11 @@
 /*global $, console*/
 /*jslint plusplus: true */
-function Main() {
+
+function Hits(pathParameter) {
     "use strict";
     var arrLinks,
-        readLinks = $.getJSON("https://raw.githubusercontent.com/chaordic/frontend-intern-challenge/master/Assets/urls.json", function (data) {
+        path = pathParameter,
+        readLinks = $.getJSON(path, function (data) {
             arrLinks = data;
         });
     this.getLinks = function () {
@@ -12,14 +14,17 @@ function Main() {
         });
     };
 
+    this.setPathUrls = function (pathParameter) {
+        path = pathParameter;
+    };
+
     /**
      *Method listlinks(), populate list of links in layout
      **/
     this.listLinks = function () {
         readLinks.complete(function () {
-            var i;
+            var i, a, span, li;
             for (i = 0; i < 5; i++) {
-                var a, span, li;
                 a = $("<a></a>").text(arrLinks[i].shortUrl);
                 a.attr("href", arrLinks[i].url);
                 a.attr("target", "blank");
@@ -48,12 +53,50 @@ function Main() {
     };
 }
 
+function UrlMinify() {
+    "use strict";
+
+    /**
+     *Method of copy stating of input[type=text]
+     **/
+    function copyToClipboard() {
+        console.log("aqui no copy");
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($("input[type=text]").val()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+
+    this.minifyUrl = function (url) {
+        $("input[type=button]").click(function () {
+            if ($("input[type=button]").val() === "ENCURTAR") {
+                $.getJSON("http://is.gd/create.php?callback=?", {
+                    url: $("input[type=text]").val(),
+                    format: "json"
+                }).done(function (data) {
+                    $("input[type=text]").val(data.shorturl);
+                    $("input[type=button]").val("COPIAR");
+                });
+            } else {
+                console.log($("input[type=button]").val());
+                var cop = $("input[type=text]").val();
+                copyToClipboard();
+                $("input[type=button]").val("ENCURTAR");
+                $("input[type=text]").val("");
+            }
+        });
+    };
+}
+
 /**
  *Global scope to application;
  **/
 $(document).ready(function () {
     "use strict";
-    var d = new Main();
-    d.setHits();
-    d.listLinks();
+    var hits = new Hits("https://raw.githubusercontent.com/chaordic/frontend-intern-challenge/master/Assets/urls.json");
+    hits.setHits();
+    hits.listLinks();
+    var urlMin = new UrlMinify();
+    urlMin.minifyUrl("https://www.google.com.br");
 });
