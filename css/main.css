@@ -24,15 +24,14 @@ footer {
 }
 
 header {
-    height: 42px;
     background-color: #fff;
-    padding: 4px 0px;
+    padding: 6px 0px;
 }
 
 header #logo-chaordic {
     width: 100%;
     height: 31px;
-    background: url(../Assets/logo-chaordic.png) 50% 6px no-repeat;
+    background: url(../Assets/logo-chaordic.png) 50% 3px no-repeat;
 }
 
 article .head-article {
@@ -69,9 +68,25 @@ article .minify-link form input[type='text'] {
     font-size: 1.5vw;
     color: #FF6E18;
     border: none;
-    background: no-repeat;
+    background: none;
     border-bottom: 1px solid #FF6E18;
     padding: 1vw;
+}
+
+::-webkit-input-placeholder {
+    color: #C7510B;
+}
+
+:-moz-placeholder {
+    color: #C7510B;
+}
+
+::-moz-placeholder {
+    color: #C7510B;
+}
+
+:-ms-input-placeholder {
+    color: #C7510B;
 }
 
 article .minify-link form input[type='button'] {
@@ -93,11 +108,10 @@ article h2 {
     margin: 0;
     font-weight: 100;
     padding: 40px 0px 10px 0;
-    ;
 }
 
 article .top-five {
-    padding: 0px 0px;
+    padding: 0px;
 }
 
 article ul {
