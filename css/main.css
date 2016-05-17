@@ -1,5 +1,16 @@
+/*Importando fontes */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+
+/**
+*Utilizando % para laguras e vw para fontes
+*fazendo com que o layout não se altere nem quebre independente do tamanho 
+*da tela
+*A unidade vw utiliza a largura da viewport para dimencionar-se e está 1/100
+*logo uma largura de 900px seria 1vw = 9px.
+**/
+
 body {
     padding: 0;
     margin: 0;
@@ -8,7 +19,7 @@ body {
 }
 
 ul {
-    list-style: none
+    list-style: none;
 }
 
 a,
@@ -72,6 +83,12 @@ article .minify-link form input[type='text'] {
     border-bottom: 1px solid #FF6E18;
     padding: 1vw;
 }
+
+
+/*
+*Não agrupar estilos para placeholder,
+*porque caso algum navegador não interprete algum dos estilos ocorrerá um erro.
+**/
 
 ::-webkit-input-placeholder {
     color: #C7510B;

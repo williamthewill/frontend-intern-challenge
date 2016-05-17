@@ -1,13 +1,36 @@
 /*global $, console*/
 /*jslint plusplus: true */
 
+/*TODO class Hits*/
 function Hits(pathParameter) {
     "use strict";
     var arrLinks,
         path = pathParameter,
-        readLinks = $.getJSON(path, function (data) {
-            arrLinks = data;
-        });
+        readLinks;
+
+    function order(arr) {
+        var i, j, tmp;
+        for (i = 0; i < arr.length; i++) {
+            for (j = 0; j < arr.length; j++) {
+                if (arr[i].hits > arr[j].hits) {
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+        arrLinks = arr;
+        console.log(arrLinks);
+    }
+
+    /**
+     *Read path and convert a object from hits;
+     **/
+    readLinks = $.getJSON(path, function (data) {
+        order(data);
+    });
+
+
     this.getLinks = function () {
         readLinks.complete(function () {
             console.log(arrLinks);
@@ -53,14 +76,14 @@ function Hits(pathParameter) {
     };
 }
 
+/*TODO class URLMinify*/
 function UrlMinify() {
     "use strict";
 
     /**
-     *Method of copy stating of input[type=text]
+     *This method realize the copy from input[type=text]
      **/
     function copyToClipboard() {
-        console.log("aqui no copy");
         var $temp = $("<input>");
         $("body").append($temp);
         $temp.val($("input[type=text]").val()).select();
@@ -68,7 +91,11 @@ function UrlMinify() {
         $temp.remove();
     }
 
-    this.minifyUrl = function (url) {
+    /**
+     *This method use is.gd api(https://is.gd/developers.php)
+     *is.gd api is limited but without authentication necessary
+     **/
+    this.minifyUrl = function () {
         $("input[type=button]").click(function () {
             if ($("input[type=button]").val() === "ENCURTAR") {
                 $.getJSON("http://is.gd/create.php?callback=?", {
@@ -92,11 +119,12 @@ function UrlMinify() {
 /**
  *Global scope to application;
  **/
+/*TODO global method*/
 $(document).ready(function () {
     "use strict";
     var hits = new Hits("https://raw.githubusercontent.com/chaordic/frontend-intern-challenge/master/Assets/urls.json");
     hits.setHits();
     hits.listLinks();
     var urlMin = new UrlMinify();
-    urlMin.minifyUrl("https://www.google.com.br");
+    urlMin.minifyUrl();
 });
